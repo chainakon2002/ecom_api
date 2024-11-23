@@ -1,41 +1,15 @@
-** env_guide **
+** env **
 
-PORT=
+ PORT=8889
+# DATABASE_URL="mysql://root:root@localhost:3306/ecom14"
 
-DATABASE_URL=
+JWT_SECRET = iloveBackend
 
-JWT_SECRET=
+OMISE_SECRET_KEY=pkey_test_608h8g1bwbz5a7e34sh
 
----------
-
-** api_service **
-
-method        path              authen     params      body 
-
-POST          /auth/register       0        none        {username, password, confirmPassword, email}
-POST          /auth/login          0        none        {username, password}
-GET           /auth/me             1        none        none
-GET           /todos               1        none        none
-POST          /todos               1        none        {title, dueDate}
-PUT           /todos/:id           1        id          {title, dueDate, status}
-DELETE        /todos/:id           1        id          none
-
-<!-- service : getAllDuplicate
-method : GET
-path : /todos/get-duplicate?title=learn
-authen : true
-params : none
-query : title=xxxx
-body : none
-response : { id, title, status, du.....} -->
+CLOUDINARY_SECRET = 'OvwF5cRLojuZ1hK2fgVlpME4wzU'
 
 
-
-
-
----------
-
-Notes
-
-MVC (Models, route+Controller, View)
+DATABASE_URL = "postgresql://postgres.lclhayxuiybtqnoxhzxo:u852u7ZMwWtmpHuw@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
+DIRECT_URL = "postgresql://postgres.lclhayxuiybtqnoxhzxo:u852u7ZMwWtmpHuw@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
 
